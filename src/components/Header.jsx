@@ -29,15 +29,27 @@ export default function Header() {
 
     return (
         <header>
-            <img src={logo}  />
+            <img src={logo} />
             <p>Далеко-далеко за словесными, горами в стране гласных и согласных жиувт рыбные текста. Если, назад?</p>
             <button>Перейти</button>
 
             <ul>
-                <MenuItem isActive={contentType==='btn1'} onClick={() => handleClick('btn1')}>{data[1]}</MenuItem>
-                <MenuItem isActive={contentType==='btn2'} onClick={() => handleClick('btn2')}>{data[2]}</MenuItem>
-                <MenuItem isActive={contentType==='btn3'} onClick={() => handleClick('btn3')}>{data[3]}</MenuItem>
-                <MenuItem isActive={contentType==='btn4'} onClick={() => handleClick('btn4')}>{data[0]}</MenuItem>
+                <MenuItem
+                    isActive={contentType === 'btn1'}
+                    onClick={() => handleClick('btn1')}
+                >{data[0]}</MenuItem>
+                <MenuItem
+                    isActive={contentType === 'btn2'}
+                    onClick={() => handleClick('btn2')}
+                >{data[1]}</MenuItem>
+                <MenuItem
+                    isActive={contentType === 'btn3'}
+                    onClick={() => handleClick('btn3')}
+                >{data[2]}</MenuItem>
+                <MenuItem
+                    isActive={contentType === 'btn4'}
+                    onClick={() => handleClick('btn4')}
+                >{data[3]}</MenuItem>
 
             </ul>
             {contentType && <p>{textOnPage[contentType]}</p>}
