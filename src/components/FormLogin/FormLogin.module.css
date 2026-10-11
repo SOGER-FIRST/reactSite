@@ -2,9 +2,10 @@
     margin: 0 auto;
     min-width: 500px;
     width: 100%;
-    background-color: #fff;
+    background-color: dark-grey;
 }
 .controlInput , .controlSelect{
+    outline: none;
     padding: 20px 10px;
     border-radius: 10px;
     width: 300px;
@@ -18,4 +19,6 @@
 }
 .controlButton {
     padding: 10px;
+    border-radius: 5px;
+    border: none;
 }

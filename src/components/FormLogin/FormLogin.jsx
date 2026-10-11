@@ -1,20 +1,31 @@
 import classes from './FormLogin.module.css'
-import {userState, useState} from 'react'
+import { userState, useState } from 'react'
 
 
 export default function FormLogin() {
     const [name, setName] = useState('')
     const [color, setColor] = useState('red')
-    
+    const [hasError, setHasError] = useState(false)
+
     function handlerNameChange(event) {
         setName(event.target.value)
+        setHasError(event.target.value.trim().length === 0)
     }
 
     return (
         <section className={classes.container}>
             <form action="">
                 <label htmlFor="name" className={classes.controlLabel}>enter your name</label>
-                <input id='name' type="text" className={classes.controlInput} placeholder="Type Text" value={name} onChange={handlerNameChange} />
+                <input
+                    id='name'
+                    type="text"
+                    className={classes.controlInput}
+                    placeholder="Type Text" value={name}
+                    onChange={handlerNameChange}
+                    style={{
+                        border: hasError ? '1px solid red' : null
+                    }}
+                />
                 <select className={classes.controlSelect} value={color} onChange={e => setColor(e.target.value)}>
                     <option value="red">red</option>
                     <option value="green">green</option>
