@@ -4,3 +4,18 @@
     width: 100%;
     background-color: #fff;
 }
+.controlInput {
+    padding: 20px 10px;
+    border-radius: 10px;
+    width: 300px;
+    border: none;
+    display: block;
+    margin: 0 auto 10px;
+}
+.controlLabel {
+    display: block;
+    margin-bottom: 10px;
+}
+.controlButton {
+    padding: 10px;
+}
