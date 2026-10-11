@@ -2,7 +2,7 @@
 import logo from '/favicon.svg'
 import MenuItem from './MenuItem/MenuItem.jsx'
 import { useState } from 'react'
-
+import FormLogin from './FormLogin/FormLogin.jsx'
 const data = ['Home', 'About us', 'Services', 'Contacts']
 const textOnPage = {
     'btn1': 'Text1',
@@ -28,6 +28,7 @@ export default function Header() {
 
 
     return (
+        <>
         <header>
             <img src={logo} />
             <p>Далеко-далеко за словесными, горами в стране гласных и согласных жиувт рыбные текста. Если, назад?</p>
@@ -56,5 +57,7 @@ export default function Header() {
             {!contentType && <p>press the button</p>}
             {/* {textInTab} */}
         </header>
+        <FormLogin />
+        </>
     )
 }
