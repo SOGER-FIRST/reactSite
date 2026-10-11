@@ -4,7 +4,7 @@
     width: 100%;
     background-color: #fff;
 }
-.controlInput {
+.controlInput , .controlSelect{
     padding: 20px 10px;
     border-radius: 10px;
     width: 300px;
